@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  position: relative;
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: brown;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.block {
+  border: 1px solid gray;
+  width: 300px;
+  margin: 10px;
+  opacity: 0;
+  animation-duration: 1s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.hiding-block {
+  animation-name: fadeOut;
+  opacity: 0;
+  transition: opacity 0.1s 1s;
+}
+
+.showing-block {
+  animation-name: fadeIn;
+  max-height: 500px;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    max-height: 0;   
+  }
+  to {
+    max-height: 500px;    
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    max-height: 500px;    
+  }
+  to {
+    max-height: 0;    
+  }
+}
